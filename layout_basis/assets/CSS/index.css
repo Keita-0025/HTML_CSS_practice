@@ -1,0 +1,59 @@
+body {
+    
+    width: 600px;
+    margin: 0 auto;
+}
+header {
+    background-color: blanchedalmond;
+    padding: 5px;
+}
+
+.header-title {
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+nav {
+    background-color: palevioletred;
+    height: 100px;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.content-list {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+main {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    .main-title {
+        margin: 0;
+    }
+    .main-content{
+        width: 50%;
+        height: 300px;
+        background-color: green;
+        overflow: hidden;
+        padding: 5px;
+
+        
+    }
+    
+}
+
+footer {
+    margin-top: 20px;
+    background-color: peru;
+    height: 150px;
+    padding: 5px;
+
+}
+
