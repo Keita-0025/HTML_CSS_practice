@@ -1,0 +1,156 @@
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.container {
+  display: grid;
+  width: 375px;
+  grid-template-columns: 375px;
+  grid-template-rows: 20px 160px auto auto auto;
+  margin: 0 auto;
+  gap: 30px 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 12px;
+}
+a:hover {
+  color: red;
+}
+h1 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #81a238;
+}
+p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #666;
+}
+
+.header {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  .title {
+    margin: 0;
+  }
+  .list {
+    width: 110px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.hero-photo {
+  width:375px ;
+}
+
+.list {
+  list-style: none;
+}
+
+
+.main {
+  display: grid;
+
+  .main-title {
+    font-size: 18px;
+    font-weight: 400;
+    color: #726f6f;
+    margin: 0;
+
+  }
+  .photo {
+    margin: 20px 0;
+
+    .photo-main {
+      margin-bottom: 5px;
+      width: 375px;
+    }
+    .photo-gallery {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+    }
+  }
+
+  .mejiro-info {
+
+    margin-bottom: 10px;
+
+    .info-list {
+      margin-top: 10px;
+      border: 2px solid grey;
+      border-radius: 20px;
+      padding: 10px;
+    }
+    .info-row {
+      font-size: 12px;
+      display: flex;
+      margin-bottom: 5px;
+      color: #666;
+      .info-label {
+        color: inherit;
+      }
+      .info-value {
+        color: inherit;
+        margin: 0;
+        width: auto;
+        margin-left: 10px;
+        flex: 1;
+      }
+    }
+    .info-text {
+      margin-bottom: 0;
+    }
+    .button {
+      display: flex;
+      justify-content: flex-end;
+      .button-back {
+        width: 50px;
+        text-align: center;
+        padding: 0;
+        border: 1px solid grey;
+        border-radius: 60px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.sns {
+  width: 251px;
+  display: flex;
+  margin: 0 auto;
+  gap: 20px;
+  padding-top: 12px;
+  border-top:1px solid #000 ;
+  .sns-icon {
+    width: 44px;
+  }
+}
+
+.footer {
+  background-color: #fff;
+  .footer-title {
+    height: 20px;
+    background-color: #B4AEAE;
+    color: azure;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .list {
+    margin: 0 0 0 30px;
+    font-size: 10px;
+    padding-left: 0;
+    line-height: 22px;
+  }
+}
