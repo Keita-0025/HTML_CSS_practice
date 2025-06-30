@@ -1,0 +1,164 @@
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/*Iphone及び共通項目*/
+
+.container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 100%;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 12px;
+}
+a:hover {
+  color: red;
+}
+h1 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #81a238;
+}
+p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #666;
+}
+
+.header {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  .title {
+    margin: 0 0 4% 0;
+  }
+  .list {
+    width: 22%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 4% 0 0 ;
+  }
+}
+.hero {
+  margin-bottom: 5%;
+  .hero-photo {
+    width: 100%;
+  }
+}
+
+.list {
+  list-style: none;
+}
+
+.main {
+  display: grid;
+
+  .main-title {
+    font-size: 18px;
+    font-weight: 400;
+    color: #726f6f;
+    margin: 0;
+  }
+  .photo {
+    margin: 20px 0;
+
+    .photo-main {
+      margin-bottom: 5px;
+      width: 100%;
+    }
+    .photo-gallery {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      gap: 5px;
+      .photo-item {
+        flex: 1 1 calc(33.33% - 10px); /* 3列で余白考慮 */
+        aspect-ratio: 1 / 1;
+      }
+    }
+  }
+
+  .mejiro-info {
+    margin-bottom: 10px;
+    margin: 0 auto;
+    width: 80%;
+
+    .info-list {
+      margin-top: 10px;
+      border: 2px solid grey;
+      border-radius: 20px;
+      padding: 10px;
+    }
+    .info-row {
+      font-size: 12px;
+      display: flex;
+      margin-bottom: 5px;
+      color: #666;
+      .info-label {
+        color: inherit;
+      }
+      .info-value {
+        color: inherit;
+        margin: 0;
+        width: auto;
+        margin-left: 10px;
+        flex: 1;
+      }
+    }
+    .info-text {
+      margin-bottom: 2%;
+    }
+    .button {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 8%;
+      .button-back {
+        width: 13%;
+        text-align: center;
+        padding: 0;
+        border: 1px solid grey;
+        border-radius: 60px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.sns {
+  width: 50%;
+  display: flex;
+  margin: 0 auto;
+  gap: 5%;
+  padding-top: 12px;
+  border-top: 1px solid #000;
+  justify-content: space-between;
+  .sns-icon {
+    width: 66%;
+  }
+}
+
+.footer {
+  background-color: #fff;
+  .footer-title {
+    height: 20px;
+    background-color: #b4aeae;
+    color: azure;
+    padding-left: 8%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .list {
+    margin: 0px;
+    font-size: 10px;
+    padding-left: 8%;
+    line-height: 1.7em;
+  }
+}
