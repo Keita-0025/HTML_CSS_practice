@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+body {
+  width: 100%;
+  background-color: #fff;
+}
+.container {
+  max-width: 550px;
+  width: 55%;
+  margin: 0 auto;
+  display: grid;
+  gap: 30px;
+}
+.header {
+  height: 25px;
+  margin-bottom: 30px;
+  .header-title {
+    font-size: 1.5rem;
+      background-color: #3fc;
+    text-align: center;
+    color: #fff;
+  }
+}
+
+.main {
+}
+.main-photo {
+    margin-bottom: 30px;
+    .bird-photo {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.comment {
+    line-height: 1.3em;
+    .comment-title {
+        margin-bottom: 10px;
+    }
+}
+
