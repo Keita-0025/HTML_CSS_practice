@@ -1,0 +1,249 @@
+@charset "utf-8";
+
+/*Iphone及び共通項目*/
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 100%;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 12px;
+}
+a:hover {
+  color: red;
+}
+h1 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #81a238;
+}
+p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #666;
+}
+
+.header {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 4% 5%;
+  align-items: center;
+  .title {
+  }
+  .list {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin-right: 4%;
+  }
+}
+.hero {
+  margin-bottom: 5%;
+  .hero-photo {
+    width: 100%;
+  }
+}
+
+.list {
+  list-style: none;
+}
+
+.main {
+  display: grid;
+
+  .main-title {
+    font-size: 18px;
+    font-weight: 400;
+    color: #726f6f;
+    margin: 0 0 0 5%;
+  }
+  .photo {
+    margin: 20px 0;
+
+    .photo-main {
+      margin-bottom: 5px;
+      width: 100%;
+    }
+    .photo-gallery {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      gap: 5px;
+      .photo-item {
+        flex: 1 1 calc(33.33% - 10px); /* 3列で余白考慮 */
+        aspect-ratio: 1 / 1;
+      }
+    }
+  }
+
+  .mejiro-info {
+    margin-bottom: 10px;
+    margin: 0 auto;
+    width: 80%;
+
+    .info-list {
+      margin-top: 10px;
+      border: 2px solid grey;
+      border-radius: 20px;
+      padding: 10px;
+    }
+    .info-row {
+      font-size: 12px;
+      display: flex;
+      margin-bottom: 5px;
+      color: #666;
+      .info-label {
+        color: inherit;
+      }
+      .info-value {
+        color: inherit;
+        margin: 0;
+        width: auto;
+        margin-left: 10px;
+        flex: 1;
+      }
+    }
+    .info-text {
+      margin-bottom: 2%;
+    }
+    .button {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 8%;
+      margin-right: 10%;
+      .button-back {
+        width: 30%;
+        text-align: center;
+        white-space: nowrap;
+        border: 1px solid grey;
+        border-radius: 60px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.sns {
+  width: 50%;
+  display: flex;
+  margin: 0 auto;
+  gap: 5%;
+  padding-top: 12px;
+  border-top: 1px solid #000;
+  justify-content: center;
+  .sns-icon {
+    width: 66%;
+    text-align: center;
+  }
+}
+
+.footer {
+  margin-top: 10px;
+
+  background-color: #fff;
+  .footer-title {
+    height: 20px;
+    background-color: #b4aeae;
+    color: azure;
+    padding-left: 8%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .list {
+    margin: 0px;
+    font-size: 10px;
+    padding-left: 8%;
+    line-height: 1.7em;
+  }
+}
+
+/*Ipadの設定*/
+
+@media (min-width: 768px) {
+  a {
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+  p {
+    font-size: 1em;
+    line-height: 22px;
+  }
+
+  .header {
+    margin-left: 2%;
+    .list {
+      width: 23%;
+    }
+  }
+
+  .main {
+    grid-template-columns: 5% 1fr 5% 1fr 5%;
+
+    .main-title {
+      font-size: 24px;
+      font-weight: 400;
+      color: #726f6f;
+      margin-top: 0;
+      grid-column: 2 / 5;
+      grid-row: 1;
+      margin: 0;
+    }
+    .photo {
+      margin-bottom: 10%;
+      grid-column: 2;
+      grid-row: 2;
+      .photo-main {
+        margin-bottom: 10px;
+      }
+    }
+
+    .mejiro-info {
+      grid-column: 4;
+      grid-row: 2;
+      .info-row {
+        font-size: 16px;
+      }
+      .button {
+        margin: 0;
+      }
+    }
+  }
+
+  .sns {
+    gap: 3%;
+    border: none;
+  }
+
+  .footer {
+    background-color: #aaa;
+    padding-bottom: 20px;
+    .footer-title {
+      background-color: inherit;
+    }
+    .list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px 30px;
+      font-size: 0.8em;
+    }
+  }
+}
+
+
