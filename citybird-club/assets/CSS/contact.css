@@ -1,0 +1,235 @@
+@charset "utf-8";
+
+/*Iphone及び共通項目*/
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 100%;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+a:hover {
+  color: red;
+}
+h1 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #81a238;
+}
+p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #666;
+}
+
+h2 {
+  font-size: 17px;
+  color: #6c4b4b;
+  margin: 0;
+}
+
+button,
+select {
+  cursor: pointer;
+}
+
+input,
+select,
+textarea {
+  width: 60%;
+  color: gray;
+  border: 1px solid gray;
+}
+
+.back {
+  width: 80px;
+  height: 20px;
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 10px;
+  grid-column: 2;
+  margin: 0 0 0 auto;
+  background-color: transparent;
+}
+
+.list {
+  list-style: none;
+}
+.more {
+  text-align: right;
+}
+
+.header {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 2%;
+  align-items: center;
+  .title {
+    margin: 0;
+  }
+  .list {
+    margin: 0;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin-right: 4%;
+  }
+}
+.hero {
+  margin-bottom: 5%;
+  .hero-photo {
+    width: 100%;
+  }
+}
+
+.contact-form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30px 1fr 30px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  .form-title {
+    grid-column: 2;
+    margin-bottom: 15px;
+  }
+  .form-body {
+    grid-column: 2;
+    .user-form {
+      margin-bottom: 30px;
+      .form-group {
+        margin-bottom: 8px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .form-group-column {
+        display: flex;
+        flex-direction: column;
+      }
+      .form-group-column textarea {
+        width: 80%;
+        min-height: 200px;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 6px;
+        box-sizing: border-box;
+        resize: vertical;
+      }
+      .form-buttons {
+        display: flex;
+        gap: 20px;
+      }
+    }
+  }
+}
+
+.Page_top {
+  margin: 0 auto;
+}
+
+.sns {
+  width: 50%;
+  display: flex;
+  margin: 0 auto;
+  gap: 5%;
+  padding-top: 12px;
+  border-top: 1px solid #000;
+  justify-content: space-between;
+  .sns-icon {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+.footer {
+  margin-top: 10px;
+
+  background-color: #fff;
+  .footer-title {
+    height: 20px;
+    background-color: #b4aeae;
+    color: azure;
+    padding-left: 8%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .list {
+    margin: 0px;
+    font-size: 10px;
+    padding-left: 8%;
+    line-height: 1.7em;
+  }
+}
+
+/*Ipadの設定*/
+
+@media (min-width: 768px) {
+  a {
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+  p {
+    font-size: 1em;
+    line-height: 22px;
+  }
+  h2 {
+    font-size: 20px;
+    color: #767673;
+    margin-bottom: 20px;
+  }
+
+  .header {
+    margin-left: 2%;
+    .list {
+      width: 23%;
+    }
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+  .Page_top {
+    display: none;
+  }
+
+  .sns {
+    margin-top: 0;
+    gap: 3%;
+    border: none;
+  }
+
+  .footer {
+    background-color: #aaa;
+    padding-bottom: 20px;
+    .footer-title {
+      background-color: inherit;
+    }
+    .list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px 30px;
+      font-size: 0.8em;
+    }
+  }
+}
+
+/*PCの設定*/
+@media (min-width: 1024px) {
+}
