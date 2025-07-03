@@ -274,18 +274,15 @@ h2 {
     font-size: 1em;
     line-height: 22px;
   }
-  h2 {
-    font-size: 20px;
-    color: #767673;
-    margin-bottom: 20px;
-  }
 
   .header {
     margin-left: 2%;
     .list {
       width: 23%;
+      font-size: 1em;
     }
   }
+
   .nav-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -394,10 +391,7 @@ h2 {
   }
 
   .footer {
-    background-color: #aaa;
     padding-bottom: 20px;
-    .footer-title {
-      background-color: inherit;
     }
     .list {
       display: grid;
@@ -406,7 +400,7 @@ h2 {
       font-size: 0.8em;
     }
   }
-}
+
 
 /*PCの設定*/
 @media (min-width: 1024px) {

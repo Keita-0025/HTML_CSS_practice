@@ -102,10 +102,10 @@ textarea {
 
 .watching {
   margin: 0 30px 30px 30px;
+  .watching-title {
+    margin-bottom: 10px;
+  }
   .watching-body {
-    .watching-title {
-      margin-bottom: 10px;
-    }
     .watching-photos {
       .location-photo {
         margin: 0;
@@ -220,16 +220,15 @@ textarea {
     }
   }
 
-  .hero{
+  .hero {
     margin-bottom: 30px;
   }
-
 
   .watching-body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 30px;
-    .watching-info{
+    .watching-info {
       .info-text {
         margin: 0;
         margin-bottom: 20px;
@@ -239,7 +238,6 @@ textarea {
       }
     }
   }
-}
 
   .Page_top {
     display: none;
@@ -252,19 +250,15 @@ textarea {
   }
 
   .footer {
-    background-color: #aaa;
     padding-bottom: 20px;
-    .footer-title {
-      background-color: inherit;
-    }
-    .list {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 5px 30px;
-      font-size: 0.8em;
-    }
   }
-
+  .list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px 30px;
+    font-size: 0.8em;
+  }
+}
 
 /*PCの設定*/
 @media (min-width: 1024px) {
