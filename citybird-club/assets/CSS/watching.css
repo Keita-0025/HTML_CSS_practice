@@ -1,0 +1,271 @@
+@charset "utf-8";
+
+/*Iphone及び共通項目*/
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 100%;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+a:hover {
+  color: red;
+}
+h1 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #81a238;
+}
+p,
+dt,
+dd {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #666;
+}
+
+h2 {
+  font-size: 17px;
+  color: #6c4b4b;
+  margin: 0;
+}
+
+button,
+select {
+  cursor: pointer;
+}
+
+input,
+select,
+textarea {
+  width: 60%;
+  color: gray;
+  border: 1px solid gray;
+}
+
+.back {
+  width: 80px;
+  height: 20px;
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 10px;
+  grid-column: 2;
+  margin: 0 0 0 auto;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+}
+
+.list {
+  list-style: none;
+}
+.more {
+  text-align: right;
+}
+
+.header {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 2%;
+  align-items: center;
+  .title {
+    margin: 0;
+  }
+  .list {
+    margin: 0;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin-right: 4%;
+  }
+}
+.hero {
+  margin-bottom: 5%;
+  .hero-photo {
+    width: 100%;
+  }
+}
+
+.watching {
+  margin: 0 30px 30px 30px;
+  .watching-body {
+    .watching-title {
+      margin-bottom: 10px;
+    }
+    .watching-photos {
+      .location-photo {
+        margin: 0;
+        .location-photo-item {
+          width: 100%;
+          margin-bottom: 5px;
+        }
+      }
+      .bird-photos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+        .bird-photo-item {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+    .watching-info {
+      .info-detail {
+        margin-bottom: 20px;
+        .info-item {
+          display: flex;
+          align-items: flex-start;
+          margin-bottom: 8px;
+        }
+
+        .info-item dt {
+          min-width: 100px;
+          white-space: nowrap;
+          flex-shrink: 0; /* つぶれないように */
+        }
+
+        .info-item dd {
+          margin: 0;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+.info-text {
+  margin-bottom: 20px;
+}
+
+.Page_top {
+  margin: 0 auto;
+}
+
+.sns {
+  width: 50%;
+  display: flex;
+  margin: 0 auto;
+  gap: 5%;
+  padding-top: 12px;
+  border-top: 1px solid #000;
+  justify-content: space-between;
+  .sns-icon {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+.footer {
+  margin-top: 10px;
+
+  background-color: #fff;
+  .footer-title {
+    height: 20px;
+    background-color: #b4aeae;
+    color: azure;
+    padding-left: 8%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .list {
+    margin: 0px;
+    font-size: 10px;
+    padding-left: 8%;
+    line-height: 1.7em;
+  }
+}
+
+/*Ipadの設定*/
+
+@media (min-width: 768px) {
+  a {
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+  p,
+  dt,
+  dd {
+    font-size: 1em;
+    line-height: 22px;
+  }
+  h2 {
+    font-size: 20px;
+    color: #767673;
+    margin-bottom: 20px;
+  }
+
+  .header {
+    margin-left: 2%;
+    .list {
+      width: 23%;
+    }
+  }
+
+  .hero{
+    margin-bottom: 30px;
+  }
+
+
+  .watching-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 30px;
+    .watching-info{
+      .info-text {
+        margin: 0;
+        margin-bottom: 20px;
+      }
+      .info-detail {
+        margin: 0;
+      }
+    }
+  }
+}
+
+  .Page_top {
+    display: none;
+  }
+
+  .sns {
+    margin-top: 0;
+    gap: 3%;
+    border: none;
+  }
+
+  .footer {
+    background-color: #aaa;
+    padding-bottom: 20px;
+    .footer-title {
+      background-color: inherit;
+    }
+    .list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px 30px;
+      font-size: 0.8em;
+    }
+  }
+
+
+/*PCの設定*/
+@media (min-width: 1024px) {
+}
