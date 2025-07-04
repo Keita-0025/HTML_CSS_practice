@@ -5,6 +5,7 @@
 body {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
 }
 .container {
   max-width: 1000px;
@@ -27,9 +28,7 @@ h1 {
   font-weight: 800;
   color: #81a238;
 }
-p,
-dt,
-dd {
+p {
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
@@ -42,17 +41,11 @@ h2 {
   margin: 0;
 }
 
-button,
-select {
-  cursor: pointer;
+.list {
+  list-style: none;
 }
-
-input,
-select,
-textarea {
-  width: 60%;
-  color: gray;
-  border: 1px solid gray;
+.more {
+  text-align: right;
 }
 
 .back {
@@ -64,15 +57,6 @@ textarea {
   grid-column: 2;
   margin: 0 0 0 auto;
   background-color: transparent;
-  display: flex;
-  justify-content: center;
-}
-
-.list {
-  list-style: none;
-}
-.more {
-  text-align: right;
 }
 
 .header {
@@ -100,56 +84,75 @@ textarea {
   }
 }
 
-.watching {
-  margin: 0 30px 30px 30px;
-  .watching-title {
-    margin-bottom: 10px;
-  }
-  .watching-body {
-    .watching-photos {
-      .location-photo {
-        margin: 0;
-        .location-photo-item {
-          width: 100%;
-          margin-bottom: 5px;
-        }
-      }
-      .bird-photos {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 5px;
-        .bird-photo-item {
-          display: block;
-          width: 100%;
-        }
-      }
-    }
-    .watching-info {
-      .info-detail {
-        margin-bottom: 20px;
-        .info-item {
-          display: flex;
-          align-items: flex-start;
-          margin-bottom: 8px;
-        }
-
-        .info-item dt {
-          min-width: 100px;
-          white-space: nowrap;
-          flex-shrink: 0; /* つぶれないように */
-        }
-
-        .info-item dd {
-          margin: 0;
-          white-space: nowrap;
-        }
-      }
-    }
-  }
+.list {
+  list-style: none;
 }
 
-.info-text {
-  margin-bottom: 20px;
+.main {
+  display: grid;
+
+  .main-title {
+    font-size: 18px;
+    font-weight: 400;
+    color: #726f6f;
+    margin: 0 0 0 5%;
+  }
+  .photo {
+    margin: 20px 0;
+
+    .photo-main {
+      margin-bottom: 5px;
+      width: 100%;
+    }
+    .photo-gallery {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      gap: 5px;
+      .photo-item {
+        flex: 1 1 calc(33.33% - 10px); /* 3列で余白考慮 */
+        aspect-ratio: 1 / 1;
+      }
+    }
+  }
+
+  .mejiro-info {
+    margin-bottom: 10px;
+    margin: 0 auto;
+    width: 80%;
+
+    .info-list {
+      margin-top: 10px;
+      border: 2px solid grey;
+      border-radius: 20px;
+      padding: 10px;
+    }
+    .info-row {
+      font-size: 12px;
+      display: flex;
+      margin-bottom: 5px;
+      color: #666;
+      .info-label {
+        color: inherit;
+      }
+      .info-value {
+        color: inherit;
+        margin: 0;
+        width: auto;
+        margin-left: 10px;
+        flex: 1;
+      }
+    }
+    .info-text {
+      margin-bottom: 2%;
+    }
+    .button {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 8%;
+    }
+  }
 }
 
 .Page_top {
@@ -201,16 +204,9 @@ textarea {
   h1 {
     font-size: 1.5em;
   }
-  p,
-  dt,
-  dd {
+  p {
     font-size: 1em;
     line-height: 22px;
-  }
-  h2 {
-    font-size: 20px;
-    color: #767673;
-    margin-bottom: 20px;
   }
 
   .header {
@@ -220,20 +216,34 @@ textarea {
     }
   }
 
-  .hero {
-    margin-bottom: 30px;
-  }
+  .main {
+    grid-template-columns: 5% 1fr 5% 1fr 5%;
 
-  .watching-body {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0 30px;
-    .watching-info {
-      .info-text {
-        margin: 0;
-        margin-bottom: 20px;
+    .main-title {
+      font-size: 24px;
+      font-weight: 400;
+      color: #726f6f;
+      margin-top: 0;
+      grid-column: 2 / 5;
+      grid-row: 1;
+      margin: 0;
+    }
+    .photo {
+      margin-bottom: 10%;
+      grid-column: 2;
+      grid-row: 2;
+      .photo-main {
+        margin-bottom: 10px;
       }
-      .info-detail {
+    }
+
+    .mejiro-info {
+      grid-column: 4;
+      grid-row: 2;
+      .info-row {
+        font-size: 16px;
+      }
+      .button {
         margin: 0;
       }
     }
@@ -258,8 +268,4 @@ textarea {
     gap: 5px 30px;
     font-size: 0.8em;
   }
-}
-
-/*PCの設定*/
-@media (min-width: 1024px) {
 }
